@@ -1,0 +1,28 @@
+CREATE DATABASE biblioteca;
+
+USE biblioteca;
+
+CREATE TABLE generos(
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL UNIQUE,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE editoras(
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL UNIQUE,
+  PRIMARY KEY(id)
+);
+
+CREATE TABLE livros(
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(100) NOT NULL,
+  edicao INT NOT NULL,
+  editoraId INT NOT NULL,
+  imagem VARCHAR(5000) NOT NULL,
+  resumo VARCHAR(300) NOT NULL,
+  generoId INT NOT NULL,
+  PRIMARY KEY(id),
+  CONSTRAINT fk_livro_editora FOREIGN KEY(editoraId) REFERENCES editoras(id),
+  CONSTRAINT fk_livro_genero FOREIGN KEY(generoId) REFERENCES generos(id)
+);

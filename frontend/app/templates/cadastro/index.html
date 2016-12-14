@@ -1,0 +1,60 @@
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" ng-click="go('/')">
+            <img alt="Brand" src="assets/book-icon.png" height="30" width="30"/>
+          </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <li><a ng-show="isAdmin()" ng-click="signOut()">Logout</a></li>
+      </ul>
+      </div>
+    </nav>
+
+    <!-- PAGINA DE REGISTRO -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <form name="livroForm" ng-submit="submitBookForm(livroForm.$valid)" novalidate>
+              <!-- nome -->
+              <div class="form-group">
+                  <label>Nome</label>
+                  <input type="text" name="nome" class="form-control" ng-model="livro.nome" required>
+              </div>
+              <!-- editora -->
+              <div class="form-group">
+                  <label>Editora</label>
+                  <input type="text" name="editora" class="form-control" ng-model="livro.editoraId" required>
+              </div>
+              <!-- gênero -->
+              <div class="form-group">
+                  <label>Gênero</label>
+                  <input type="text" name="genero" class="form-control" ng-model="livro.generoId" required>
+              </div>
+              <!-- edição -->
+              <div class="form-group">
+                  <label>Edição</label>
+                  <input type="text" name="edicao" class="form-control" ng-model="livro.edicao" required>
+              </div>
+              <!-- resumo -->
+              <div class="form-group">
+                  <label>Resumo</label>
+                  <textarea class="form-control" rows="3" placeholder="Resumo" ng-model="livro.resumo" required></textarea>
+                  <!-- <input type="text" name="edition" class="form-control" ng-model="book.edition" required> -->
+              </div>
+              <div class="form-group">
+                  <label>Imagem</label>
+                  <input type="text" name="imagem" class="form-control" ng-model="livro.imagem" required>
+              </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+    <!-- FIM PAGINA DE REGISTRO -->
+
+    <script type="text/javascript">
+      $('.dropdown-toggle').dropdown();
+    </script>

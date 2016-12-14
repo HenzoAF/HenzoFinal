@@ -1,0 +1,77 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" ng-click="go('/')">
+        <img alt="Brand" src="assets/book-icon.png" height="30" width="30"/>
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a ng-show="isAdmin()" ng-click="signOut()">Logout</a></li>
+      <li><a ng-hide="isAdmin()" ng-click="go('auth')">Login</a></li>
+  </ul>
+  </div>
+</nav>
+
+
+<!-- PAGINA EXIBIR LIVRO -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="panel panel-default col-md-10 col-md-offset-1">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-default">
+                <img ng-src="{{livro.imagem}}" alt="..." class="bookImg">
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">Nome</div>
+                <div class="panel-body">
+                  {{livro.nome}}
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">Editora</div>
+                <div class="panel-body">
+                  {{livro.editoraId}}
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">Edição</div>
+                <div class="panel-body">
+                  {{livro.edicao}}
+                </div>
+              </div>
+
+
+            </div>
+            <div class="col-md-8">
+
+              <div class="panel panel-default">
+                <div class="panel-heading">Gênero</div>
+                <div class="panel-body">
+                  {{livro.generoId}}
+                </div>
+              </div>
+
+              <div class="panel panel-default">
+                <div class="panel-heading">Resumo</div>
+                <div class="panel-body">
+                  {{livro.resumo}}
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- FIM PAGINA EXIBIR LIVRO -->
+
+<script type="text/javascript">
+  $('.dropdown-toggle').dropdown();
+</script>
