@@ -4,8 +4,10 @@
     $scope.livros = [];
     $scope.livro = {};
 
-    $scope.genreArray = [];
-    $scope.publisherArray = [];
+    // $scope.genreArray = [];
+    // $scope.publisherArray = [];
+
+    //Define variaveis gerais
 
     $http({
      method: 'GET',
@@ -19,25 +21,25 @@
        // or server returns response with an error status.
      });
 
-      $http({
-     method: 'GET',
-     url: '/Henzo/backend/index.php/generos'
-   }).then(function successCallback(response) {
-     $scope.genreArray = response.data;
-     }, function errorCallback(response) {
-       // called asynchronously if an error occurs
-       // or server returns response with an error status.
-     });
-
-      $http({
-     method: 'GET',
-     url: '/Henzo/backend/index.php/editoras'
-   }).then(function successCallback(response) {
-     $scope.publisherArray = response.data;
-     }, function errorCallback(response) {
-       // called asynchronously if an error occurs
-       // or server returns response with an error status.
-     });
+  //     $http({
+  //    method: 'GET',
+  //    url: '/Henzo/backend/index.php/generos'
+  //  }).then(function successCallback(response) {
+  //    $scope.genreArray = response.data;
+  //    }, function errorCallback(response) {
+  //      // called asynchronously if an error occurs
+  //      // or server returns response with an error status.
+  //    });
+   //
+  //     $http({
+  //    method: 'GET',
+  //    url: '/Henzo/backend/index.php/editoras'
+  //  }).then(function successCallback(response) {
+  //    $scope.publisherArray = response.data;
+  //    }, function errorCallback(response) {
+  //      // called asynchronously if an error occurs
+  //      // or server returns response with an error status.
+  //    });
 
       $scope.go = function(path) {
         console.log(path);

@@ -11,7 +11,7 @@
         if (isValid) {
             if (typeof(Storage) !== "undefined") {
                 if ($scope.admin.name == "admin" && $scope.admin.password == "admin") {
-                    // Guardando no storage local...
+                    //Checa se a entrada é válida e salva o status 1(logado) no storage local
                     console.log("teste");
                     localStorage.setItem("adminID", null);
                     localStorage.setItem("adminID", 1);
@@ -23,10 +23,9 @@
                     console.log("inválido");
                 }
 
-                // Debugando...
+                // Debug
                 console.log(localStorage.getItem("adminID"));
-                location
-                // Definindo rota por tipo de login
+                
               } else {
                 alert("Seu navegador não suporta este website, desculpe.");
               }

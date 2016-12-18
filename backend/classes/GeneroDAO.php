@@ -67,7 +67,7 @@
     public function exists($nome){
       $connection = mysqli_connect("localhost", "root", "", "biblioteca");
       $sql = "SELECT *
-              FROM editoras
+              FROM generos
               WHERE nome = '".$nome."'";
       $resultado = mysqli_query($connection, $sql);
       if (mysqli_num_rows($resultado) > 0) {
