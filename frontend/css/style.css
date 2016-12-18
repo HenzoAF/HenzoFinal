@@ -1,5 +1,6 @@
 .book {
   background-color: #EBEAE9;
+  height: 350px;
 }
 
 .login {
@@ -13,4 +14,10 @@
 
 .reg {
   margin-bottom: 3%;
+}
+
+.foto {
+  max-width: 100%;
+  min-height: 200px;
+  max-height: 200px;
 }

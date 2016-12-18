@@ -32,10 +32,10 @@
         </div> -->
         <!-- Book sample -->
         <div class="thumbnail col-md-3 book" ng-repeat="livro in livros | filter:search">
-          <div>
+          <!-- <div>
             <pre>livro={{livro | json}}</pre>
-          </div>
-          <img ng-src="{{livro.imagem}}" alt="..." height="100"> <!--Book Img -->
+          </div> -->
+          <img class="foto" ng-src="{{livro.imagem}}"> <!--Book Img -->
           <div class="caption">
             <h3>{{livro.nome}}</h3>
             <!-- <p>{{book.summary}}</p> -->

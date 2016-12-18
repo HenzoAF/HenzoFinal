@@ -11,19 +11,21 @@
 <!-- PAGINA DE LOGIN -->
 <div class="container-fluid">
  <div class="row">
-   <form name="loginAdminForm" ng-submit="submitLoginForm(loginAdminForm.$valid)" novalidate>
-       <!-- nome -->
-       <div class="form-group">
-           <label>Admin's name</label>
-           <input type="text" name="name" class="form-control" ng-model="admin.name" required>
-       </div>
-       <!-- senha -->
-       <div class="form-group">
-           <label>Admin's password</label>
-           <input type="password" name="password" class="form-control" ng-model="admin.password" required>
-       </div>
-     <button type="submit" class="btn btn-primary">Submit</button>
-   </form>
+   <div class="col-md-10 col-md-offset-1">
+     <form name="loginAdminForm" ng-submit="submitLoginForm(loginAdminForm.$valid)" novalidate>
+         <!-- nome -->
+         <div class="form-group">
+             <label>Admin's name</label>
+             <input type="text" name="name" class="form-control" ng-model="admin.name" required>
+         </div>
+         <!-- senha -->
+         <div class="form-group">
+             <label>Admin's password</label>
+             <input type="password" name="password" class="form-control" ng-model="admin.password" required>
+         </div>
+       <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+    </div>
  </div>
 </div>
 <!-- FIM PAGINA DE LOGIN -->
